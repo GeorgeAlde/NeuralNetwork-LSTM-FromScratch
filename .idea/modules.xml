@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/NeuralNetwork-LSTM-FromScratch.iml" filepath="$PROJECT_DIR$/.idea/NeuralNetwork-LSTM-FromScratch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NeuralNetwork-TitanicPrediction-FromScratch.iml" filepath="$PROJECT_DIR$/.idea/NeuralNetwork-TitanicPrediction-FromScratch.iml" />
     </modules>
   </component>
 </project>
