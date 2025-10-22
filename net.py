@@ -7,7 +7,7 @@ class Network:
     def __init__(self):
         self.Wxh = randn(7, 7) / 1000
         self.Why = randn(2, 7) / 1000
-        #print(self.Wxh[1])
+
         self.bh = [0,0,0,0,0,0,0]
         self.by = [0,0]
         self.last_hs = []
@@ -24,7 +24,7 @@ class Network:
             xh[i] = np.tanh(xh[i])
             self.last_hs.append(xh[i])
             self.last_inputs = inputs
-            #print(self.Wxh[Hi][j])
+
         y0 = 0
         y1 = 0
         for Hi in range(7):
@@ -34,7 +34,7 @@ class Network:
         y1 += self.by[1]
         return y0, y1
 
-    def backprop(self, d_y, y_index, gradient_num = 10, learn_rate = 0.0005):
+    def backprop(self, d_y, y_index, gradient_num = 7, learn_rate = 0.0005):
         d_by = d_y
         d_by = np.clip(d_by, -1, 1)
         for i in range(gradient_num):
@@ -53,7 +53,6 @@ class Network:
 
                 step = d_why * learn_rate
                 self.Why[y_index, j] -= step
-                #print(self.Why)
                 step = d_bh * learn_rate
                 self.bh[j] -= step
 
