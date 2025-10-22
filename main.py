@@ -39,7 +39,7 @@ def train():
             else:
                 d_y[j] = softout[j]
         for k in range(2):
-            net.backprop(d_y[k], k, learn_rate=0.0005, gradient_num=100)
+            net.backprop(d_y[k], k, gradient_num=10)
         if np.argmax(softout) == correct_index:
             num_correct += 1
         if np.argmax(softout) == correct_index:
