@@ -34,7 +34,7 @@ class Network:
         y1 += self.by[1]
         return y0, y1
 
-    def backprop(self, d_y, y_index, gradient_num = 7, learn_rate = 0.0005):
+    def backprop(self, d_y, y_index, gradient_num = 20, learn_rate = 0.0005):
         d_by = d_y
         d_by = np.clip(d_by, -1, 1)
         for i in range(gradient_num):
