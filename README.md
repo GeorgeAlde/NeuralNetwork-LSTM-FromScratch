@@ -1,1 +1,1 @@
-This a neural network built from scratch in Python, using backprogation for training with underlying maths derived myself. This model typically has around a 70% accuracy, which is similar to other libaries that can be used. 
+This a neural network built from scratch in Python, using backprogation for training with underlying maths (partial derivatives etc) derived myself. This model typically has around a 70% accuracy, which is similar to other libaries that can be used. 
