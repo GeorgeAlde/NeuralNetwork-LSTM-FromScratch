@@ -12,7 +12,7 @@ def loss(output, correct_index):
     if output[correct_index] != 0:
         return -np.log(output[correct_index])
     else:
-        return 10
+        return 10 
 
 
 net = Network()

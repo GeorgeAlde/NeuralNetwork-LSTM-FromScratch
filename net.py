@@ -8,21 +8,19 @@ class Network:
         self.Wxh = randn(7, 7) / 1000
         self.Why = randn(2, 7) / 1000
 
-        self.bh = [0,0,0,0,0,0,0]
-        self.by = [0,0]
-        self.last_hs = []
-        self.last_inputs = []
+        self.bh = np.array([0,0,0,0,0,0,0])
+        self.by = np.array([0,0])
+        self.last_hs = np.array([])
+        self.last_inputs = np.array([])
 
     def forward(self, inputs): #input is a 7 long list
         xh = [0] * 7
-        self.last_hs = []
-        self.last_inputs = []
         for i in range(7):
             for Hi in range(7):
                 xh[i] += self.Wxh[i][Hi] * inputs[Hi]
             xh[i] = xh[i] + self.bh[i]
             xh[i] = np.tanh(xh[i])
-            self.last_hs.append(xh[i])
+            self.last_hs = np.append(self.last_hs, xh[i])
             self.last_inputs = inputs
 
         y0 = 0
